@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ez="http://java.sun.com/jsf/composite/ezcomp"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link href="resources/assets/css/default.css" rel="stylesheet" type="text/css" />
+        <link href="resources/assets/css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <title>SAT - System Auto Translate</title>
+    </h:head>
+    <h:body>
+        <div id="top" class="top">
+            <h:form>
+                <h:commandLink action="/index" value="SAT - System Auto Translate" />
+            </h:form>
+        </div>
+        <div>
+            <div id="left">     
+                <h:form>
+                    <h:commandLink action="/index.xhtml" value="Главная" />
+                    <p/><h:commandLink action="/translate.xhtml" value="Перевод" />              
+                    <hr />                
+                    Счетчик: <h:outputLabel value="#{count.hitCount}" />                 
+                </h:form>
+            </div>
+            <div id="content" class="left_content">
+                <h:form><h:dataTable id="tableTranslate" width="100%">
+                    <h:column >
+                        <f:facet name="header">
+                            
+                                <h:panelGrid>
+                                    <h:outputLabel value="Текст для перевода: " />
+                                    <h:inputTextarea value="text" cols="70" rows="10" />
+                                </h:panelGrid>
+                            
+                        </f:facet>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            
+                                <h:panelGrid>
+                                    <h:outputLabel value="Результат перевода: " />
+                                    <h:inputTextarea value="text" cols="70" rows="10" />
+                                </h:panelGrid>
+                            
+                        </f:facet>
+                    </h:column>  
+                </h:dataTable>
+                <h:commandButton value="Перевести" /></h:form>
+            </div>
+        </div>
+    </h:body>
+</html>
+
